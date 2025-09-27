@@ -1,0 +1,12 @@
+# flow
+emulator-account.pkey
+imports
+.env
+node_modules
+.cursor
+.delete
+.cursorignore
+out/
+cache/
+.github
+history

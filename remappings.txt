@@ -1,0 +1,5 @@
+@1inch/limit-order-protocol-contract/=evm-contracts/lib/cross-chain-swap/lib/limit-order-protocol/
+@1inch/solidity-utils/=evm-contracts/lib/cross-chain-swap/lib/solidity-utils/
+openzeppelin-contracts/=evm-contracts/lib/cross-chain-swap/lib/openzeppelin-contracts/
+
+cross-chain-swap/=evm-contracts/lib/cross-chain-swap/contracts
