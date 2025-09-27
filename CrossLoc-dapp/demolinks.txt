@@ -1,0 +1,179 @@
+--------------EVM to STRK-------------------
+[EVM]: Resolver Deploys EscrowSrc 
+https://polygonscan.com/tx/0x417e01764947c5a9a1d3794949869bc487de6084daa1212b5bdd2ca218e07af2
+➜ 
+[EVM]: Order 0x7dd576a9c1c2e67120cd7b2d65e3112a9d6d912ae348fec64ce57d5f08033138 filled for 10000 in tx 0x417e01764947c5a9a1d3794949869bc487de6084daa1212b5bdd2ca218e07af2
+➜ 
+< . . . Querying srcEscrow address from Deployment logs . . . >
+➜ srcEscrowAddress :  0x98bf90e97b73e58145646ca782772ff84203f243
+
+
+[STRK] :  init STRK.EscrowDst and Deposit Funds 
+➜ [STRK]: Order 762501547591913159607240205427339304405958864227829314995183393896125362526 filled for 1000 in tx 0x1caa805ebf4338b90c5cd9011defaec3e30a66f77003a0a6af275e0c4027468
+➜ https://sepolia.starkscan.co/tx/0x1caa805ebf4338b90c5cd9011defaec3e30a66f77003a0a6af275e0c4027468
+➜ 
+< secret-preimage shared with resolver on Dst Order filling >
+➜ 0xcef94c353d2410d4d2456aaec2b4b8515a14894105ffba1731f8a53444c5ec00
+➜ 
+[STRK] :  Withdraw & Claim Funds for EVM_User in STRK.EscrowDst
+➜ Tx: https://sepolia.starkscan.co/tx/0x3fa009d9aa36862770538c6f32985e4416a4526cd760382bd102ca9ad713538
+➜ 
+[EVM] :  Withdraw & Claim Funds for STRK_User in EVM.EscrowSrc
+➜ Tx: https://polygonscan.com/tx/0x08c63fa7a1ac4777388ea03ed80d3a2145cd7251ceada9b274c2705cf5ed098f
+➜ 
+ EVM->STRK Swap Completed !
+
+
+
+--------------STRK to EVM -------------------
+⚡️ Swapping Tokens from STRK -> EVM [cross-chain] 
+➜ swapAmounts: 10000 -> 1000
+➜ 
+[STRK]: Check + Approve SRC tokens
+➜ 
+< . . . Generating Secret . . .>
+➜ Secret + Hashlock generated
+➜ 
+[STRK]: Creating HTLC CrossChainOrder 
+➜ 📋 Order Created:
+➜     orderHash: 0x211c354abdd6da8e77e617200125f8fd8933ac634b40923464c630b885ab7c5
+➜     makingAmount: 10000
+➜     takingAmount: 1000
+➜     srcToken: 0x02d7ef1afd9b4cd826d23b0e3d5949f60045846ebf84880378de777053d6ecc1
+➜     dstToken: 0x783C9038A1d2BD3CB8017EdDc29F1A1904eEc584
+➜     srcChain: STRK
+➜     dstChain: EVM
+➜ 
+[STRK]: Sign Order and Propagate to all Relayers
+➜ 📝 Signature: ( 59599107265379599699505282031589165992470149544736651642369364985176865095 1670776961233662027329762266684267485138966556389362000713819837540492269624 )
+➜ 
+< A Relayer has accepted your Order > 
+➜ 
+[STRK] Resolver init EscrowSrc Order
+➜ [STRK]: Order 936010220540401729533256621435761093994782710013255666498940306905674463173 filled for 10000 in tx 0x36962916bd426b41a13b81aec7cf70bdce5d2e165c0d1f60baca5fa2eb4e456
+➜ https://sepolia.starkscan.co/tx/0x36962916bd426b41a13b81aec7cf70bdce5d2e165c0d1f60baca5fa2eb4e456
+➜ 
+[EVM]: Taker approve tokens to resolver
+➜ Token Approved to resolver
+➜ 
+[EVM]: Resolver Deploy EscrowDst 
+➜ ✅ EscrowDst deployed in tx: https://polygonscan.com/tx/0xfa17e9bfc470f487a844861d583fe4ac30271e8e9f19787d795bdd2eb0a004be
+➜ 
+[EVM] Created dst deposit for order 0x0211c354abdd6da8e77e617200125f8fd8933ac634b40923464c630b885ab7c5 in tx 0xfa17e9bfc470f487a844861d583fe4ac30271e8e9f19787d795bdd2eb0a004be
+➜ 
+< . . . Querying srcEscrow address from Deployment logs . . . >
+➜ DstEscrowCreated
+➜ ✅ EscrowDst : 0x824c65242EA6f75B86D3454124D1320c623d6bCD
+➜ 
+< secret-preimage shared with resolver on Dst Order filling >
+➜ 0x1d3e15b6005332cbf6e205c4bb8ec287220d58bcfc0898cfb058536e36fb9700
+➜ 
+[EVM] :  Withdraw & Claim Funds for STRK_User in EVM.EscrowDst
+➜ Tx: https://polygonscan.com/tx/0x9da60c006674cc56f1092dc73a9f1c3249146e9d0347de0dc69ed548d2e1c1d4
+➜ ✅ Amount Claimed from DST Escrow
+➜ 
+[STRK] :  Withdraw & Claim Funds for EVM_User in STRK.EscrowDst
+➜ Tx: https://sepolia.starkscan.co/tx/0x64de85d484b3a723ac9d59ab2797a750b48e539928e3cb6068077058fd6f3b8
+➜ 
+ STRK -> POLYGON Swap Completed !
+
+
+
+
+ ---------EVM - Kadena---------
+ ✅ Connected MetaMask user: 0x0D2a7a7A808975dF6e1858772C1cC0A92177D5A9
+➜ ⚡️ Swapping Tokens from EVM -> Kadena [cross-chain] 
+➜ 	(swapAmounts: 10000 -> 1000)
+➜ 
+[EVM]: Check + Approve SRC tokens to LimitOrderProtocol
+➜ 
+< . . . Generating Secret . . .>
+➜ 
+[EVM]: Creating HTLC CrossChainOrder 
+➜ 📋 Order Created:
+➜     orderHash: 0xb5f92ce602d98bf24ddf891b5c6da9873275167151b33698b71a8d227734b491
+➜     makingAmount: 10000
+➜     takingAmount: 1000
+➜     srcToken: 0x783C9038A1d2BD3CB8017EdDc29F1A1904eEc584
+➜     dstToken: 0xEe58bf35b2937c6f2b9b41cAf1fD338C42d5D73C
+➜     srcChain: POLYGON
+➜     dstChain: KADENA20
+➜ 
+[EVM]: Sign Order and Propagate to all Relayers
+➜ 📝 Signature: 0x74b6a0a3559bac7c09eca69f89ff4285ec1b244e5da83de656fea9b167080f811faa1a99bf6db3ec1ca6998a1ba2291a3aa324bb6c481c1821d3419f33a2cefd1b
+➜ 
+< A Relayer has accepted your Order > 
+➜ 
+[EVM]: Resolver Deploys EscrowSrc 
+➜ ✅ EscrowSrc deployed in tx: https://polygonscan.com/tx/0xdd3ca866ec3a91abea8fbe6857fc283b7aed73403be52f0518caba09756f1d33
+➜ EVM: Order 0xb5f92ce602d98bf24ddf891b5c6da9873275167151b33698b71a8d227734b491 filled for 10000 in tx 0xdd3ca866ec3a91abea8fbe6857fc283b7aed73403be52f0518caba09756f1d33
+➜ 
+< . . . Querying srcEscrow address from Deployment logs . . . >
+➜ srcEscrowAddress :  0x6d80b30a0cfe49d4f5050a5c57a4136f6145c78a
+➜ 
+[KADENA] : User approving token to Resolver
+➜ Resolver allowance: 115792089237316195423570985008687907853269984665640564039457584007913129639935
+➜ 
+[KADENA] : Deploying ErcrowDST
+➜ ✅ EscrowDst deployed in tx: https://chain-20.evm-testnet-blockscout.chainweb.com/tx/0xdeb60ab82a053ac4e4146b9affffc290769d8fd1bd2f82bdb60de2a2d3633c8d
+➜ 
+[KADENA] Created dst deposit for order 0xb5f92ce602d98bf24ddf891b5c6da9873275167151b33698b71a8d227734b491 in tx 0xdeb60ab82a053ac4e4146b9affffc290769d8fd1bd2f82bdb60de2a2d3633c8d
+➜ 
+< secret-preimage shared with resolver on Dst Order filling >
+➜ (0xc535b51d86a3a98afc91db3a511a205222dbded34dcd6817bed90f9f669b4600)
+➜ 
+[EVM] :  Withdraw & Claim Funds for Kadena_User in EVM.EscrowSrc
+➜ Tx: https://polygonscan.com/tx/0xb98e34212dd963e3cc7b64746cbce2bfb2de2504f20e08c970bf6bf0cbf95f9d
+➜ 
+[KADENA] :  Withdraw & Claim Funds for User in Kadena.EscrowDst
+➜ ✅ Claim complete on Kadena chain20
+➜ Tx: https://chain-20.evm-testnet-blockscout.chainweb.com/tx/0x6a4b752325a2df34c4b930067340f271d975c60966bdfc13ca6195ccb89ae245
+
+
+-----KAD-to-KAd--------------
+⚡️ Swapping Tokens from Kadena_21 -> Kadena_20 [cross-chain] 
+➜ 	(swapAmounts: 10000 -> 1000)
+➜ 
+[KADENA_21]: Check + Approve SRC tokens to Resolver
+➜ Resolver allowance: 115792089237316195423570985008687907853269984665640564039457584007913129639935
+➜ 
+< . . . Generating Secret . . .>
+➜ 
+[KADENA_21]: Creating HTLC CrossChainOrder 
+➜ 📋 Order Created:
+➜     orderHash: 0xe8dd4b559d47f0adb9beb19415a4bfd6721ea585492ba64449feb7e1af5c1aa5
+➜     makingAmount: 10000
+➜     takingAmount: 1000
+➜     srcToken: 0xEe58bf35b2937c6f2b9b41cAf1fD338C42d5D73C
+➜     dstToken: 0xEe58bf35b2937c6f2b9b41cAf1fD338C42d5D73C
+➜     srcChain: KADENA21
+➜     dstChain: KADENA20
+➜ 
+[KADENA_21]: Sign Order and Propagate to all Relayers
+➜ 📝 Signature: 0x4a1f1d1bb1d711404bce25280b0fec8266da0f0eb253a72c3c67ed92c7c609825f763c1d031e251af51821ebbb7f00ae8eaeb3343b1528d857938860b80dd5dd1b
+➜ 
+< A Relayer has accepted your Order > 
+➜ 
+[KADENA_21]: Resolver Initiates EscrowSrc 
+➜ ✅ EscrowSrc deployed in tx: https://chain-21.evm-testnet-blockscout.chainweb.com/tx/0x828e1f3fa78b5a07f096059619c0e7da469ba4ca86c46702ad32bb1117f7e1d5
+➜ 
+[KADENA_21]: Order 0xe8dd4b559d47f0adb9beb19415a4bfd6721ea585492ba64449feb7e1af5c1aa5 filled for 10000 in tx 0x828e1f3fa78b5a07f096059619c0e7da469ba4ca86c46702ad32bb1117f7e1d5
+➜ 
+[KADENA_20] : taker approving dst token to Resolver
+➜ Resolver allowance: 115792089237316195423570985008687907853269984665640564039457584007913129639935
+➜ 
+[KADENA_20] : Resolver Deploy EscrowDst
+➜ ✅ EscrowDst init in tx: https://chain-20.evm-testnet-blockscout.chainweb.com/tx/0x83c813462f2490ef10719a25b372b6c640de519f7abb012a5599139d7e8c7904
+➜ 
+[KADENA_20] Created dst deposit for order 0xe8dd4b559d47f0adb9beb19415a4bfd6721ea585492ba64449feb7e1af5c1aa5 in tx 0x83c813462f2490ef10719a25b372b6c640de519f7abb012a5599139d7e8c7904
+➜ 
+< secret-preimage shared with resolver on Dst Order filling >
+➜ (0x1fc0410cf87080a11ab01682db47946fddc30440ccdb1d011c3365940185b900)
+➜ 
+[KADENA_20] :  Withdraw & Claim Funds for User in Kadena.EscrowDst
+➜ ✅ Claim complete on Kadena chain20
+➜ Tx: https://chain-20.evm-testnet-blockscout.chainweb.com/tx/0x0e50c62a769b873f70608f594db409df54a4bd390e66ce559ce3366b55858b75
+➜ 
+[KADENA_21] :  Withdraw & Claim Funds for User in Kadena.EscrowDst
+➜ ✅ Claim complete on Kadena chain21
+➜ Tx: https://chain-21.evm-testnet-blockscout.chainweb.com/tx/0xc73e289114c81bc87831eda88fb60210c0a3b68f5c13eda41fbd590157a3572e
