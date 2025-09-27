@@ -1,0 +1,6 @@
+Polygon-mainet
+
+FeeToken deployed: 0xEe58bf35b2937c6f2b9b41cAf1fD338C42d5D73C
+EscrowFactory deployed: 0xA32d5E236aF2B030263B18b8C6e1100f44511121
+Resolver deployed: 0x8296D49fc713b9CD99052985bB094920c35b5B04
+MockUSDC deployed: 0x4cCa442799909DA8f90db889c139bcc2B4d7aC40

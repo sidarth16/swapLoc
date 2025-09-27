@@ -76,6 +76,9 @@ contract Resolver is Ownable {
      * @notice See {IResolverExample-deployDst}.
      */
     function deployDst(IBaseEscrow.Immutables calldata dstImmutables, uint256 srcCancellationTimestamp) external onlyOwner payable {
+        // Address token = dstImmutables.token;
+        // address erc20 = token.get()
+        IERC20(AddressLib.get(dstImmutables.token)).approve(address(_FACTORY), type(uint256).max);
         _FACTORY.createDstEscrow{value: msg.value}(dstImmutables, srcCancellationTimestamp);
     }
 
