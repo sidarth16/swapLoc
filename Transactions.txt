@@ -1,0 +1,74 @@
+--------------EVM to STRK-------------------
+[EVM]: Resolver Deploys EscrowSrc 
+https://polygonscan.com/tx/0x417e01764947c5a9a1d3794949869bc487de6084daa1212b5bdd2ca218e07af2
+
+[STRK] :  init STRK.EscrowDst and Deposit Funds 
+➜ [STRK]: Order 762501547591913159607240205427339304405958864227829314995183393896125362526 filled for 1000 in tx 0x1caa805ebf4338b90c5cd9011defaec3e30a66f77003a0a6af275e0c4027468
+➜ https://sepolia.starkscan.co/tx/0x1caa805ebf4338b90c5cd9011defaec3e30a66f77003a0a6af275e0c4027468
+➜ 
+< secret-preimage shared with resolver on Dst Order filling >
+➜ 0xcef94c353d2410d4d2456aaec2b4b8515a14894105ffba1731f8a53444c5ec00
+➜ 
+[STRK] :  Withdraw & Claim Funds for EVM_User in STRK.EscrowDst
+➜ Tx: https://sepolia.starkscan.co/tx/0x3fa009d9aa36862770538c6f32985e4416a4526cd760382bd102ca9ad713538
+➜ 
+[EVM] :  Withdraw & Claim Funds for STRK_User in EVM.EscrowSrc
+➜ Tx: https://polygonscan.com/tx/0x08c63fa7a1ac4777388ea03ed80d3a2145cd7251ceada9b274c2705cf5ed098f
+➜ 
+ EVM->STRK Swap Completed !
+
+
+
+--------------STRK to EVM -------------------
+⚡️ Swapping Tokens from STRK -> EVM [cross-chain] 
+➜ swapAmounts: 10000 -> 1000
+➜ 
+[STRK]: Check + Approve SRC tokens
+➜ 
+< . . . Generating Secret . . .>
+➜ Secret + Hashlock generated
+➜ 
+[STRK]: Creating HTLC CrossChainOrder 
+➜ 📋 Order Created:
+➜     orderHash: 0x211c354abdd6da8e77e617200125f8fd8933ac634b40923464c630b885ab7c5
+➜     makingAmount: 10000
+➜     takingAmount: 1000
+➜     srcToken: 0x02d7ef1afd9b4cd826d23b0e3d5949f60045846ebf84880378de777053d6ecc1
+➜     dstToken: 0x783C9038A1d2BD3CB8017EdDc29F1A1904eEc584
+➜     srcChain: STRK
+➜     dstChain: EVM
+➜ 
+[STRK]: Sign Order and Propagate to all Relayers
+➜ 📝 Signature: ( 59599107265379599699505282031589165992470149544736651642369364985176865095 1670776961233662027329762266684267485138966556389362000713819837540492269624 )
+➜ 
+< A Relayer has accepted your Order > 
+➜ 
+[STRK] Resolver init EscrowSrc Order
+➜ [STRK]: Order 936010220540401729533256621435761093994782710013255666498940306905674463173 filled for 10000 in tx 0x36962916bd426b41a13b81aec7cf70bdce5d2e165c0d1f60baca5fa2eb4e456
+➜ https://sepolia.starkscan.co/tx/0x36962916bd426b41a13b81aec7cf70bdce5d2e165c0d1f60baca5fa2eb4e456
+➜ 
+[EVM]: Taker approve tokens to resolver
+➜ Token Approved to resolver
+➜ 
+[EVM]: Resolver Deploy EscrowDst 
+➜ ✅ EscrowDst deployed in tx: https://polygonscan.com/tx/0xfa17e9bfc470f487a844861d583fe4ac30271e8e9f19787d795bdd2eb0a004be
+➜ 
+[EVM] Created dst deposit for order 0x0211c354abdd6da8e77e617200125f8fd8933ac634b40923464c630b885ab7c5 in tx 0xfa17e9bfc470f487a844861d583fe4ac30271e8e9f19787d795bdd2eb0a004be
+➜ 
+< . . . Querying srcEscrow address from Deployment logs . . . >
+➜ DstEscrowCreated
+➜ ✅ EscrowDst : 0x824c65242EA6f75B86D3454124D1320c623d6bCD
+➜ 
+< secret-preimage shared with resolver on Dst Order filling >
+➜ 0x1d3e15b6005332cbf6e205c4bb8ec287220d58bcfc0898cfb058536e36fb9700
+➜ 
+[EVM] :  Withdraw & Claim Funds for STRK_User in EVM.EscrowDst
+➜ Tx: https://polygonscan.com/tx/0x9da60c006674cc56f1092dc73a9f1c3249146e9d0347de0dc69ed548d2e1c1d4
+➜ ✅ Amount Claimed from DST Escrow
+➜ 
+[STRK] :  Withdraw & Claim Funds for EVM_User in STRK.EscrowDst
+➜ Tx: https://sepolia.starkscan.co/tx/0x64de85d484b3a723ac9d59ab2797a750b48e539928e3cb6068077058fd6f3b8
+➜ 
+ STRK -> POLYGON Swap Completed !
+
+
