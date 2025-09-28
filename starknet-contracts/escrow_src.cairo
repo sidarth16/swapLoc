@@ -219,7 +219,6 @@ mod EscrowSrc {
 
         let erc20 = IERC20Dispatcher { contract_address: token };
         erc20.transfer(maker, amount);
-        // assert(ok, 'transfer failed');
 
         self.emit(Event::Cancelled(Cancelled { swap_id, caller }));
     }
