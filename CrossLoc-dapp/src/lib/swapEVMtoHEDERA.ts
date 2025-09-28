@@ -454,27 +454,3 @@ export class swapEVMtoHEDERA {
 
 }
 
-// // ----------------- MAIN -----------------
-// async function main() {
-//     try {
-
-//         const evmToStrk = new swapEVMtoStarknet()
-//         const result = await evmToStrk.swapCrossChain(
-//             '0x4cCa442799909DA8f90db889c139bcc2B4d7aC40', // Mock-USDC
-//             '0x02d7ef1afd9b4cd826d23b0e3d5949f60045846ebf84880378de777053d6ecc1', // Starknet strk USDC
-//             100000n, //makingAmt
-//             100n, //takingAmt
-//             '0x03cd91c0ace43f0b8cb28c970c23cf8f05d0adcf37bd9108b0ca377868242453', // Starknet user address
-//         )
-
-//         console.log('🎉 EVM->STRK Swap done!')
-//         console.log('Order hash:', result.orderHash)
-//         console.log('Secret:', result.secret)
-
-//     } catch (error) {
-//         console.error('❌ Swap failed:', error)
-//     }
-// }
-// main()
-
-

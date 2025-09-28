@@ -168,46 +168,7 @@ export class swapStarknetToEVM {
 
         tx = await tokenContract.transferFrom(evmUserAddress, EVM_CONFIG.resolver, amount);
         await tx.wait()
-        // tx = await tokenContract.transfer(EVM_CONFIG.escrowFactory, amount);
-        // await tx.wait()
-
-        // console.log(`resolverOwner token balance: ${await tokenContract.balanceOf(EVM_CONFIG.resolverOwner)}`)
-        // console.log(`resolverOwner Feetoken balance: ${await feeTokenContract.balanceOf(EVM_CONFIG.resolverOwner)}`)
-
-        // console.log(`resolver token balance: ${await tokenContract.balanceOf(EVM_CONFIG.resolver)}`)
-        // console.log(`resolver Feetoken balance: ${await feeTokenContract.balanceOf(EVM_CONFIG.resolver)}`)
-
-        // console.log(`allowance(resolver,factory): ${await tokenContract.allowance(EVM_CONFIG.resolver, EVM_CONFIG.escrowFactory)}`)
-        // console.log(`allowance(resolverOwner,factory): ${await tokenContract.allowance(EVM_CONFIG.resolverOwner, EVM_CONFIG.escrowFactory)}`)
-        // console.log(`allowance(resolverOwner,resolver): ${await tokenContract.allowance(EVM_CONFIG.resolverOwner, EVM_CONFIG.resolver)}`)
-
-        // let approveTx = await tokenContract.approve(EVM_CONFIG.resolver, MaxUint256);
-        // await approveTx.wait();
-
-        // approveTx = await feeTokenContract.approve(EVM_CONFIG.resolver, MaxUint256);
-        // await approveTx.wait();
-
-        // approveTx = await tokenContract.approve(EVM_CONFIG.escrowFactory, MaxUint256);
-        // await approveTx.wait();
-
-        // approveTx = await feeTokenContract.approve(EVM_CONFIG.escrowFactory, MaxUint256);
-        // await approveTx.wait();
-
-        // if (resolverBalance < amount) {
-        //     throw new Error(`Insufficient token balance! (${resolverBalance} < ${amount}`)
-        // }
-
-        // let approveTo = EVM_CONFIG.escrowFactory;
-        // let allowance = await tokenContract.allowance(EVM_CONFIG.resolverOwner, approveTo);
-
-        // if (allowance < amount) {
-        //     console.log('🔓 Approving token')
-        //     const approveTx = await tokenContract.approve(approveTo, MaxUint256);
-        //     const receipt = await approveTx.wait();
-        //     console.log('✅ token Approved')
-        // }
-        // allowance = await tokenContract.allowance(EVM_CONFIG.resolverOwner, approveTo)
-        // console.log("Resolver allowance:", allowance.toString())
+        
     }
 
   private async createCrossChainOrderSTRK(
@@ -456,22 +417,3 @@ export class swapStarknetToEVM {
     console.log('\n STRK -> POLYGON Swap Completed !')
   }
 }
-
-// ----------------- MAIN -----------------
-// async function main() {
-//   try {
-//     const strkToEvm = new swapStarknetToEVM()
-//     const result = await strkToEvm.swapCrossChain(
-//       '0x02d7ef1afd9b4cd826d23b0e3d5949f60045846ebf84880378de777053d6ecc1', // STRK USDC
-//       '0x4cCa442799909DA8f90db889c139bcc2B4d7aC40', // EVM USDC
-//       1000n,
-//       990n,
-//       '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266' // EVM user address
-//     )
-//     console.log('🎉 STRK->EVM Swap done!')
-//     console.log(result)
-//   } catch (err) {
-//     console.error('❌ Swap failed:', err)
-//   }
-// }
-// main()
